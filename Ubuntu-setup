@@ -1,0 +1,55 @@
+sudo apt update
+sudo apt upgrade
+sudo apt install ubuntu-restricted-extras gnome-tweaks htop vim git pdftk torbrowser-launcher texlive-latex-extra texlive-lang-polish texlive-lang-english texlive-science texlive-fonts-extra latexmk beep audacity
+
+# optional: wine playonlinux texmaker
+
+# for nVidia drivers:
+ubuntu-drivers autoinstall
+
+# snap apps:
+sudo snap install spotify zoom-client discord code
+
+# flat remix theme:
+sudo add-apt-repository ppa:daniruiz/flat-remix
+# moka icons theme:
+sudo add-apt-repository -u ppa:snwh/ppa
+sudo apt-get update
+sudo apt-get install flat-remix flat-remix-gnome flat-remix-gtk
+sudo apt install moka-icon-theme
+
+# firefox sync, containers sync
+# gnome extensions: dash to dock, hide activities button, user themes, workspace matrix, caffeine
+
+# remove trash icon from the dock:
+gsettings set org.gnome.shell.extensions.dash-to-dock show-trash false
+
+# ctrl+tab/ctrl+shift+tab navigation in terminal:
+gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ next-tab '<Primary>Tab'
+gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ prev-tab '<Primary><Shift>Tab'
+# move close, minimize and maximize buttons to the left 
+gsettings set org.gnome.desktop.wm.preferences button-layout 'close,minimize,maximize:'
+
+# dissable natural scrolling:
+gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll false
+
+# show battery %:
+gsettings set org.gnome.desktop.interface show-battery-percentage true
+
+# turn night light on:
+gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
+
+# to sync with iCloud calendar (https://askubuntu.com/questions/911567/how-to-sync-icloud-calendar)
+sudo apt install evolution 
+
+# Haskell:
+sudo apt install build-essential curl libffi-dev libffi7 libgmp-dev libgmp10 libncurses-dev libncurses5 libtinfo5
+curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+#customize Hsakell prompt
+echo ':set prompt "λ> "' > /home/jedrek/.ghc/ghci.conf
+chmod go-w /home/jedrek/.ghc/ghci.conf
+
+# launch full-scren HTOP at startup - in startup app preferences enter:
+# gnome-terminal --full-screen -- htop
+
+# TODO colors and size for the comand line
