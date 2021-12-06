@@ -1,0 +1,25 @@
+# dependencies
+sudo apt-get install wmctrl xdotool libinput-tools python3-packaging
+
+# permissions
+sudo gpasswd -a $USER input
+# after executing the above command reboot is needed
+
+# installation
+git clone https://github.com/bulletmark/libinput-gestures.git
+cd libinput-gestures
+sudo make install
+
+# testing:
+# libinput-gestures -d
+
+# configuration
+echo 'gesture swipe up xdotool key ctrl+alt+Up
+gesture swipe down     xdotool key ctrl+alt+Down
+gesture swipe left     xdotool key ctrl+alt+Left
+gesture swipe right    xdotool key ctrl+alt+Right
+gesture swipe up 4     xdotool key super
+gesture swipe down 4   xdotool key super' > ~/.config/libinput-gestures.conf
+
+libinput-gestures-setup autostart start
+
