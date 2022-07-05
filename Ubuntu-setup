@@ -1,6 +1,6 @@
 sudo apt update
 sudo apt upgrade
-sudo apt install ubuntu-restricted-extras gnome-tweaks htop vim git pdftk torbrowser-launcher texlive-latex-extra texlive-lang-polish texlive-lang-english texlive-science texlive-fonts-extra latexmk beep audacity
+sudo apt install ubuntu-restricted-extras gnome-tweaks htop vim git pdftk torbrowser-launcher texlive-latex-extra texlive-bibtex-extra texlive-lang-polish texlive-lang-english texlive-science texlive-fonts-extra latexmk beep audacity
 
 # optional: wine playonlinux texmaker
 
