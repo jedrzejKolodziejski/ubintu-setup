@@ -1,6 +1,6 @@
 sudo apt update
 sudo apt upgrade
-sudo apt install ubuntu-restricted-extras gnome-tweaks htop vim git pdftk torbrowser-launcher texlive-latex-extra texlive-bibtex-extra texlive-lang-polish texlive-lang-english texlive-science texlive-fonts-extra latexmk beep audacity
+sudo apt install ubuntu-restricted-extras gnome-tweaks htop vim git pdftk torbrowser-launcher texlive-latex-extra texlive-bibtex-extra texlive-lang-polish texlive-lang-english texlive-science texlive-fonts-extra latexmk beep audacity cargo
 
 # optional: wine playonlinux texmaker
 
@@ -51,5 +51,18 @@ chmod go-w /home/jedrek/.ghc/ghci.conf
 
 # launch full-scren HTOP at startup - in startup app preferences enter:
 # gnome-terminal --full-screen -- htop
+
+# Installing diffr (enhanced diff) via Cargo:
+sudo apt install cargo
+cargo install diffr
+# Add appropriate stuff to PATH
+echo -e '\n# path for Cargo (Rust)\nPATH="$PATH:/home/jedrek/.cargo/bin"' >>  ~/.profile
+
+# Configure git:
+git config --global user.email 'jedrzejkolodziejski@gmail.com'
+git config --global user.name 'Jędrzej Kołodziejski'
+git config --global pager.log 'diffr | less'
+git config --global pager.show 'diffr | less'
+git config --global pager.diff 'diffr | less'
 
 # TODO colors and size for the comand line
