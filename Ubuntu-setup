@@ -18,7 +18,7 @@ sudo apt-get update
 sudo apt-get install flat-remix flat-remix-gnome flat-remix-gtk
 sudo apt install moka-icon-theme
 
-# firefox sync, containers sync; globalprivacycontrol on
+# firefox sync, containers sync; globalprivacycontrol on; browser.backspace_action 0
 # gnome extensions: dash to dock, hide activities button, user themes, workspace matrix, caffeine
 
 # remove trash icon from the dock:
